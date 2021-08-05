@@ -5,8 +5,8 @@
   <input type="submit" name="Registrar" (click)="registrarUsuario()"><br/>
 </form>
 <br/>
-<p *ngIf="registrado">{{mensaje}} con el nombre {{nombre}} {{apellido}}</p>
+<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre {{nombre}} {{apellido}}</p>
 
-<ng-template> <!--Lo que esta adentro de ng-template no carga por defecto en el buscador-->
-  <p>Nadie registrado</p>
+<ng-template #sinRegistrar> <!--Lo que esta adentro de ng-template no carga por defecto en el buscador-->
+  <p>Nadie se ha registrado</p>
 </ng-template>
